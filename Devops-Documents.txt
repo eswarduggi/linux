@@ -1,0 +1,656 @@
+Server
+------------------------------
+Host the applications
+	
+OS
+------------------------------
+os interacts with hardward and softwares. it has few parts
+Kernel-- Heart of OS, interacrt with hardware
+Shell- takes the input from user and pass to kernel to do utilities
+
+UNIX OS----------------
+Very costly 
+tightly coupled with hardware
+
+UNIX+Hardware == not Portable
+
+Linus Torvals
+MS-DOS-- IBM
+Free
+no hardware locking =Portablebased on unix principle ---> using c Language
+Kernal+Shell = Linux
+96% servers running in Linux in the word
+
+Less Cost
+More performance - Consume less memory and more speed
+
+secured - Originally from UNIX principles
+More Community support
+highly stable --> run for years
+Low power 
+
+OPensource Kernel with Shell
+----------------------------------
+add more utilities -> ubuntu, federe,Centos,
+Linux+shell+graphices==Android, ubuntu, Desktop
+
+
+Authentication and Authentication
+--------------------------------
+username
+password
+
+what you know -->password
+What you know --> username key
+what you are --> fingerprint, palm, retina
+
+Public Key and private key
+----------------------------------
+public -- keep inside the servers
+
+Server=box=node
+private kay--> whoever wants access they have private keay
+
+IP/Public Key 
+
+How to generate
+-----------------------
+ssh-keygen - f <file-name> = private key and public key
+Git bhash -- mini Linux in windows = you can use Linux commands up to some
+
+ssh-ras <some code> username@computer name = Public key
+on -premise
+-----------------
+your company data center
+
+RHEL---> Licensed , give us some support,
+Tehy will give the us code, they welcome everyone to develop
+
+
+Centos --They will take code of RHEL and building it releasing it as Centos
+Centos Comminity support 
+
+Utuntu
+-------
+Oracle Suse
+how to connect server using git bash
+-------------------------------------
+ssh -- securesheel =Protocals
+
+Protocals
+usernamepassword/ private key
+port
+
+HTTP- 80
+HTTPS -443
+SSH -22 = Complete access to server
+Ssh - i <Prinate-key> username@IP ( ssh -i Downloads/linuxos.pem ec2-user@server ip)
+
+IT/software -- Exchanging information between computers
+
+$ -- normal user
+# --Root user
+
+Switch to Root --> Sudi su -
+
+Yum install nginx -y -- to install software
+
+systemctl start nginx -- to satrt the nginx
+
+access server from browser -- https://ip address
+--------------------------------------------------------------------------------------------------------------------------------------------------
+2
+---------------------------------------------------------------------------------------------------------------------------------------------------
+PWD- present working directory
+case sensitive
+Google and google both different in linux
+
+uname - which operabting systemctl
+uname -a it will give full information
+
+<command-name> <option> <input>
+
+uname --all
+uname --help
+ -s,-p,-n 
+ 
+ man uname - it will give manual information
+ man --help
+ 
+ ls--> list of the files
+ 
+ cd / -- change directory
+ ls -l --> lenthy format
+ ls -lr -- revers lenthy format
+ ls -lt
+ ls-ltr
+ 
+ ls -la -- it will show hidden files/directories
+ ls -lar - it will give revers format
+ 
+ CRUD--- Create,read,update, delete
+ 
+ touch file name.txt --- to crcrate files
+ mkdir - create directory
+ cat > <file name> it will creat file and allow you to enter the text
+ 
+ ctrl+d -- to save the content
+ 
+ cat <filename> -- to see the content
+ 
+ up-arrow--> you can see the previous commands
+ > redicetion,deleted old data and create new
+ >> append data in existing file
+ 
+ cd demo/ -- to enter into demo directory
+ cd .. one step back to directory
+ 
+ cat <files1> <file2>   > <files2> -- it will merge file1 to file2
+ 
+ cp -- copy 
+ cp example.txt demo
+ Cp <source> <destination>
+ 
+ Mv - like cut,
+ 
+ mv <source> <destination>
+ 
+ Mkdir <directory name> to create folder/directory
+ 
+ mv demo2 demo
+ cd demo/
+ mv demo2 ..
+ 
+ cp demo2 demo
+ 
+ cp demo2 demo -r  it will copy all files in that folder
+ -r -- recursive in linux
+ 
+ rm - rmeove directory\files
+  rm demo
+  rm -- command will delete only empty directories
+  
+  rm -r demo
+
+  cp /etc/passwd passwd
+  cp /etc/hosts hosts
+  
+  cat passwd
+  
+  grep bin passwd  find the ward bin
+  grep shutdown passwd find shutdown word
+  
+  cat >> passwd
+  google
+  GOOGLE -- save the file
+  cat passwd
+  
+  grep google passwd
+  grep -i google passwd  --- -i is case in sensitive
+  Grep <word-to-find> <file name>
+  grep 
+  head file name -- it will give first 10 lines
+  
+  
+  head passwd
+  head <file-name>
+  
+  head -n 2 passwd
+  
+  tail passwd
+  tail -n 2 passwd
+  
+  echo hi Linux -- to print some thing in linux, we use echo command
+  
+  Linux stores the command success/failure in exit status
+  echo $?
+  0- success
+  anything - failure
+  
+  to see success or failure in linux we use echo $? -- 0 mean success, 1 means failure
+  
+  wget <url> - to download the file
+  w- means web
+  
+  by default wget not installed in linux like chrome
+  sudo yum install wget -y
+  
+  ls -l
+  
+  curl <rul>
+  to view the source at the run console
+  
+  cat variable.tf
+  --------------------------------------------------------------------------------------------------------------
+  Ownership and permission
+  --------------------------------------------------------------------------------------------------------------
+  mutiple users can login at the same time
+  
+  Ownership
+  ------------
+  user -- the one who created
+  Group --- which Groupo
+  Others -- other than the owner and group
+  
+  Centos is created, a group with same namealso created by default
+  - <file or Directory> rw- user rw- group r-- pthers
+  r- read
+  w- write
+  x - execute
+  
+  john -- add him to centos group
+  ramesh-- don't add him to centos group
+  rahesh -- other user
+  if he logs ito linux server he gets 
+  
+  user/owner -- u
+  Group-- g
+  Others --o 
+  
+  Chmod
+  ---------------
+  Change the permission
+  
+  chmod u+x variable.tf
+  user got execution access.
+  
+  ls -l
+  chmod g-w variable.tf
+  group don't have write access
+  chmod o+x variable.tf -- other have only execution access.
+  
+  chmod ugo+x variable.tf -- every on hava execution access
+  
+  chmod ugo-x variable.tf - remove execition permission
+  
+  R -- 4
+  W---2
+  X---1
+  754
+  chmod 745 variable.tf
+  
+  chmod 400 variables.tf
+  
+  -============================================================================================================
+  session---3
+  =============================================================================================================
+  vim
+  ---
+  yum install vim -y
+  
+  by default its not installed, we will install vim
+   vim hello.txt
+   Tree modes in vim
+   1. Esc modes
+   2. colum modes
+   3. insert modes
+   
+   vim passwd
+   shift +colum to enter into colum modes
+   from colum mode to esc mode , press esc
+   
+   colum mode:-- 
+   ---------------------
+   :/kernal -- search from top of the file
+   :? <security> 
+   ---- serach from battom of the file
+   vim sshd_config
+   :/password
+   :?password
+ :set n -- to display umbers
+ :set nonu -- to remove the numbers
+ :set ic  -- case insensitive
+ :set noic -- case sensitive
+ :noh -- no highlite
+ :q -- exit the file
+ :100 -- to go to 100 lines
+ :2 -- to to 2nd lines
+ :some number -- it will take to in that lines
+ 
+ Insert mode-------------------
+ ----------------------
+ :wq and enter -- save the file
+ i-- to enter into insert mode
+ enter something and save
+ :wq
+ 
+ :q -- force quit with out saving
+ 
+ you wrote something a, but realised it is wrong and don't want to save
+ esc
+ :q and enter
+ :q! -- force exit
+ 
+ u-- undo
+ y -- yank/copy
+ d -- cut
+ p----paste
+  yy -- line copied
+  10p -- 
+  10dd -- 10 lines to the bottom will be cut
+  
+  two times d, it will cut
+  
+ vim hello.txt
+ :s/<word to replace> <new-word>
+ 
+ :s/sbin/new-word
+ :2s/sbin/new-word --- replcing all send lin
+ :%s/sbin/new-word/g
+ -----------------------------------
+ Process management
+ -------------------------------------
+ in linux everything is process, whatever you do in linux, it will processid
+ ps -- process from your terminal
+ ps -e 
+ ps -ef - list dowan all process
+ 
+ foreground --- which runs in the terminal sticks to terminal you cant do anything
+ back gound -- runs in the background
+ 
+ sleep 2o
+ 
+ sleep 300 --
+ 
+ sleep 300&
+ ps -ef |grep sleep -- to serach the perticular process wi=hich is running
+ ps -ef | grep java
+ 
+ kill <procces id> -- request to stop
+ kill -9 <pid> force to stop.
+ 
+ ps -ef|grep sleep
+ kill -9  pid
+ 
+	Super Admin
+ ===========================================================
+ session -4
+ ==================================================
+ How to create user -- you must have a root
+ 
+ CRUD
+ -----------------
+ useradd>user-name>
+ password to the user
+  passwd <username>
+  
+  read the user information
+  id <user-name>
+  id - it will give you current user info .root user id is 0
+  whenever a user is created , by default a group on the same name will be created
+  ]Every  user have
+  1. primary group
+  2. secondary group
+  
+  to see all the users information
+  vim /etc/passwd
+   yum install vim -y -- if not install vim
+   
+   getent /paaswd -- (/etc/passwd)to give entries of password file
+   
+   GROUP Information
+   -----------------------------
+   CRUD
+   ------
+   groupadd <group-name>
+   
+   getent group
+   
+   give access to the group and then add users to the group
+   usermod -a <Group-Name> user name  -- aads to secondary groups
+      usermod -g <Group-Name> user name --
+	  Remove user from group -- gpasswd -d  <user-name> <grtoup-name>
+	  
+	  gpasswd -d kumar developer
+	now user have on primary and one secondary group which is developer
+now user kumar to be in support group for few days\
+ usermod -a -G support kumar	
+   
+   groupdell <group-name>
+   
+   gpasswd -d kumar developer
+   
+   chamod -g kumar kuamr --to add his own group
+   
+   userdel kumar -- to delete the user
+   first remove user from primay and secondary groups
+   gpasswd -d <user-name> <user-name>
+  the groups and added to his own group
+  usermod -g <user-name(default-group)> <username> --> user will be deleted from all the groups
+
+userdel <user-name>
+
+groupdel <group-name>
+   
+   ssh kumar@ip
+   by defult, users will not login with passwrd, for the we need to change the sshd_config
+   vim /etc/ssh/sshd_config
+    search for password, and password authentication change to "YES". if still not able to login with user, restart the service systemctl restart sshd
+	
+	USer joins the organozation
+	----------------------------------
+	Admin will ask him give his public key.
+	su -kumar
+	mkdir .ssh
+	chmod 700 .ssh -R
+	cd .ssh
+	touch authorized_keys
+	vim authorized_keys
+	
+	cat kumar.pub  user will share with aadmin
+	admin add kumar public key in autorized keys, shift to copy key
+	chmod 400 authorized_keys
+	.
+	admin ask kumar to login
+	ssh -i kumar kumar@ip
+	
+	how you will give root access to kumar
+	vim /etc/sudoers
+	 or 
+	 usermod -aG wheel kumar, will added to wheel group to get root access to kumar
+	 passwd kumar
+	 sudo yum install wget -y
+	 sudo su -
+	 gpasswd -d kumar wheel
+	 
+	 or
+	 vim /etc/sudoers
+	 
+	 kumar ALL=(ALL)  ALL -- add this in the sudoers file to get admin access to kumar
+	 
+	 
+	 Pakage management
+	 ------------------------
+	 Yum --> Yellow dog utility manager
+	 rpm - redhat package management
+	 
+	 a game --> java should be installed
+	 
+	 game has a dependency on java
+	 1. install java
+	 2. install game
+	 
+	 if you use yum, install game , yum can undestand dependency and inatll
+	 
+	 yum install nginx -y
+	 
+	 
+	 cd /etc/yum.repos.d/ --- all repo information here
+	  yum list installed ---> show all pakages installed
+	  
+	  yum list installed |wc -l -- count package
+	  
+	 yum list all -- all pakages
+	 
+	 yum list all |wc -l -- show all pakages
+	 
+	 yum update -y ---- it will do update for all pakages
+	 
+	 yum list available --> all - installed
+	 
+	 yum list available |wc -l
+	  yum remove nginx -- to remove pakages
+	  ====================================================================================
+	  session--5
+	  ====================================================================================
+	  Service management
+	  Network Mangement
+	  
+	  suedo su -
+	  yum installe nginx -y
+	  systemctl start nginx 
+	  systemctl status nginx
+	  ps -ef
+	  ps -ef |grep nginx
+	  systemctl stop mginx
+	  systemctl restart nginx
+	  restart linux server and nginx service alos stop.
+	  if you restart the machin and once system is up ngix server should start automatically for that
+	  use command -- systemctl enabel nginx
+	  systemctl disable nginx
+	  ----------------------------
+	  cat /etc/
+	  in this there is a file call release
+	  *release -- it will end with releade
+	  
+	  ls *release
+	  cat /etec/release  -- it will show linux release and distribution
+	   cat /proc/cpuinfo -- it will give cpu information
+	   
+	   cat /proc/meminfo -- it will give memory information
+	   whenever goes something on your server you should use first commant -- top
+	   top
+	   
+	   htop
+	   
+	   free- to check free memory
+	   
+	   df -h -- to check harddisk size
+	   df -hT  --to see disk type
+	   
+	   / -- inside this it is taking more meory, how do we check what is taking more 
+	   cd /
+	   du -sh *
+	   
+	   cd /usr
+	   du -sh *
+	   
+	   how can you find the files in your linux server
+	   find  {where to -serach} -name 
+	   find /ect -name "passwd"
+	   
+	   find /-name "passwd"  - it will search passwd folder in every where
+	   
+	   find / -maxdepth 1 -name "passwd" -- check max depth of the folder
+	   
+	   how to download tar firm from internat
+	   
+	   wget <url-link>
+	   
+	   yum install wget -y 
+	   
+	   how to untar the file
+	    tar -xf <file name>
+		TARFILE= url
+		echo $TARFILE
+		awknand cut command
+		seperate the fileds 
+		echo $TARFILE |awk -F "/" '{Print $1}
+		
+		cat /etc/passwd |awk _F ":" '{print $1F}
+	   
+	   echo $TARFILE | rev| cut -d "/" -f1 
+	   how to see the last
+	   
+	   vim example.sh
+	   sh startup.sh
+	    ps -ef |grep java
+		shutdowm.sh
+		yum remove java -yank/copy
+		
+		FILENAME=apatch-tomcat
+		echo $FILENAME |sed -e 's/'.tar.gz//'
+		
+		vim expamle.sh
+		type the shellscrip commands and save and excute the file it will install software througn shellscript
+		sh example.sh
+		
+		Network magement
+		--------------
+		operation system
+		networking
+		programming
+		storage
+		 0-65535 -- ports
+		 netstat - to check running ports in our linux
+		 
+		 ping google.com -- to test internet is working or not
+		 
+		 yum install net-tolls -y 
+		 
+		 netstat -lt
+		 nestat -ltn - to see the port numbemer
+		 
+		 telnet 
+		 intsall telnet
+		 
+		 ping facebook and take ip of facebook
+		  telnet ip
+		  
+		  3 tier architecture
+		  -----------------------------
+		  Desktop -appliction
+		  -------------------
+		  update-- do it by yourself
+		  storage-- crash then you loose the data
+		  
+		
+	   
+	   
+	  
+	  
+	
+   
+   
+   
+   
+  
+ 
+ 
+ 
+ 
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
